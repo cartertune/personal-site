@@ -1,0 +1,41 @@
+.text-overlay-container {
+  position: relative;
+
+  &:hover {
+    .overlay {
+      display: inline;
+    }
+  }
+}
+
+.H1 {
+  font-size: 84px;
+  font-family: $font-fam-primary;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: $clt-white;
+  color: transparent;
+
+  &.overlay {
+    display: inline;
+  }
+}
+
+.H2 {
+  font-size: 54px;
+  font-family: $font-fam-primary;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: $clt-white;
+  color: transparent;
+}
+
+.overlay {
+  display: none;
+  position: absolute;
+  left: -4px;
+  top: -4px;
+  color: $clt-white;
+}

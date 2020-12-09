@@ -1,0 +1,35 @@
+.home-page {
+  height: 100%;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.carter-tune {
+  margin-bottom: 50%;
+  position: relative;
+
+  .text-overlay-container:last-child {
+    position: absolute;
+    left: 132px;
+  }
+}
+
+.links-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 10%;
+}
+
+.hardwood-floor {
+  position: fixed;
+  width: 100%;
+  background: $clt-hardwood;
+  height: 29%;
+  bottom: 0;
+  left: 0;
+}

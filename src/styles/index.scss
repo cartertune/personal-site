@@ -1,0 +1,19 @@
+@import "~bootstrap/scss/bootstrap";
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700;800&display=swap");
+@import "./constants.scss";
+@import "./text.scss";
+@import "./bootstrap_overrides.scss";
+@import "./home_page.scss";
+@import "./modifiers.scss";
+
+body {
+  background-color: $clt-green;
+  margin: 0;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  width: 100%;
+}
