@@ -32,6 +32,16 @@
   color: transparent;
 }
 
+@media (max-width: $mobile-bp) {
+  .H1 {
+    font-size: 42px;
+  }
+
+  .H2 {
+    font-size: 28px;
+  }
+}
+
 .overlay {
   display: none;
   position: absolute;
