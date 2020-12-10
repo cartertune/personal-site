@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
-import HomePage from "../src/UI/home_page";
+import HomePage from "./UI/home_page/homePage";
 
 const Main = (props) => {
   return (
