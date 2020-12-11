@@ -5,39 +5,43 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: ["babel-loader"]
+        use: ["babel-loader"],
       },
       {
         test: /\.scss$/,
         use: [
           {
-            loader: "style-loader"
+            loader: "style-loader",
           },
           {
-            loader: "css-loader"
+            loader: "css-loader",
           },
           {
-            loader: "sass-loader"
-          }
-        ]
+            loader: "sass-loader",
+          },
+        ],
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
-        use: ["file-loader"]
-      }
-    ]
+        test: /\.(png|svg|jpg|gif|glb|gltf)$/,
+        use: ["file-loader"],
+      },
+      {
+        test: /\.obj$/,
+        loader: "webpack-obj-loader",
+      },
+    ],
   },
   resolve: {
-    extensions: ["*", ".js", ".jsx"]
+    extensions: ["*", ".js", ".jsx"],
   },
   output: {
     path: __dirname + "./../dist",
     publicPath: "/",
-    filename: "bundle.js"
+    filename: "bundle.js",
   },
   devServer: {
     contentBase: "./dist",
     publicPath: "/",
-    historyApiFallback: true
-  }
+    historyApiFallback: true,
+  },
 };

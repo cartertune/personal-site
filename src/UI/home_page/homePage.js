@@ -1,7 +1,8 @@
 import React from "react";
+import CarterCharacterScene from "../components/3d-components/CarterCharacterScene";
+import CarterImage from "../components/CarterImage";
 import CarterTuneText from "../components/CarterTuneText";
 import H2 from "../components/H2";
-import carter from "../resources/Carter yoga mat (No BG).png";
 
 const HomePage = (props) => {
   return (
@@ -22,7 +23,8 @@ const HomePage = (props) => {
           <div className="row h-100">
             <div className="col-12 h-100">
               <div className="carter-image-container">
-                <img src={carter}></img>
+                <CarterCharacterScene />
+                {/* <CarterImage /> */}
               </div>
             </div>
           </div>
