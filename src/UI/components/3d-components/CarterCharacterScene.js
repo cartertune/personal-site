@@ -1,8 +1,10 @@
 import React, { Suspense, useRef, useState } from "react";
 
 import { Canvas, useFrame } from "react-three-fiber";
+import * as THREE from "three";
 import Carter from "./Carter";
 import CarterImage from "../CarterImage";
+console.log(THREE);
 
 const CarterCharacterScene = (props) => {
   const d = 8.25;
@@ -10,9 +12,15 @@ const CarterCharacterScene = (props) => {
   return (
     <Canvas
       // onMouseMove={(e) => (mouse.current = getMousePos(e))}
-      // shadowMap
+      concurrent
+      colorManagement
       // pixelRatio={[1, 1.5]}
-      camera={{ position: [0, 0, 12] }}
+      // camera={camera}
+      camera={{
+        position: [0, 2, 50],
+        fov: 3,
+        zoom: 0.14,
+      }}
     >
       {/* <hemisphereLight
         skyColor={"black"}
@@ -30,13 +38,15 @@ const CarterCharacterScene = (props) => {
         shadow-camera-far={1500}
         castShadow
       /> */}
-      <ambientLight intensity={0.3} />
+      <ambientLight color={"#fdf3c6"} intensity={0.4} />
       {/* Diretion light */}
-      <directionalLight position={[10, 10, 5]} intensity={1} />
-      <directionalLight
+      <directionalLight position={[10, 3, 5]} intensity={1} castShadow />
+      <directionalLight position={[-10, 3, 5]} intensity={0.5} castShadow />
+      <directionalLight position={[0, -3, 5]} intensity={0.1} castShadow />
+      {/* <directionalLight
         castShadow
         position={[0, 10, 0]}
-        intensity={1.5}
+        intensity={0.5}
         shadow-mapSize-width={1024}
         shadow-mapSize-height={1024}
         shadow-camera-far={50}
@@ -44,15 +54,11 @@ const CarterCharacterScene = (props) => {
         shadow-camera-right={10}
         shadow-camera-top={10}
         shadow-camera-bottom={-10}
-      />
+      /> */}
       {/* Spotlight Large overhead light */}
-      <spotLight intensity={1} position={[1000, 0, 0]} castShadow />
+      <spotLight intensity={0.4} position={[0, 120, -350]} castShadow />
       <Suspense fallback={null}>
-        <Carter
-          mouse={mouse}
-          position={[0, -10, 0]}
-          scale={[0.08, 0.08, 0.08]}
-        />
+        <Carter mouse={mouse} position={[0, -5, 0]} scale={[1.2, 1.2, 1.2]} />
       </Suspense>
     </Canvas>
   );

@@ -40,11 +40,19 @@
 .carter-image-container {
   position: relative;
   height: 125%;
-  top: -75%;
+  top: -85%;
+  width: 65%;
   img {
     position: absolute;
     max-width: 100%;
     max-height: 100%;
+  }
+}
+@media (max-width: $mobile-bp) {
+  .carter-image-container {
+    height: 100%;
+    top: -60%;
+    width: 100%;
   }
 }
 
