@@ -15,21 +15,6 @@
   }
 }
 
-.carter-tune {
-  margin-bottom: 50%;
-  position: relative;
-
-  .text-overlay-container:last-child {
-    position: absolute;
-    left: 132px;
-  }
-  @media (max-width: $mobile-bp) {
-    .text-overlay-container:last-child {
-      left: 84px;
-    }
-  }
-}
-
 .links-container {
   display: flex;
   flex-direction: column;

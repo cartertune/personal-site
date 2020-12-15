@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import CarterCharacterScene from "../components/3d-components/CarterCharacterScene";
 import CarterImage from "../components/CarterImage";
 import CarterTuneText from "../components/CarterTuneText";
@@ -12,7 +13,9 @@ const HomePage = (props) => {
           <CarterTuneText />
         </div>
         <div className="col links-container">
-          <H2 clickable>Projects</H2>
+          <Link to="/projects">
+            <H2 clickable>Projects</H2>
+          </Link>
           <H2 clickable>Books</H2>
           <H2 clickable>Blog</H2>
           <H2 clickable>About</H2>
@@ -23,8 +26,8 @@ const HomePage = (props) => {
           <div className="row h-100">
             <div className="col-12 h-100">
               <div className="carter-image-container">
-                <CarterCharacterScene />
-                {/* <CarterImage /> */}
+                {/* <CarterCharacterScene /> */}
+                <CarterImage />
               </div>
             </div>
           </div>

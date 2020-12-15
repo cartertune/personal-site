@@ -32,6 +32,48 @@
   color: transparent;
 }
 
+.H3 {
+  font-size: 32px;
+  font-family: $font-fam-primary;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: $clt-white;
+}
+
+.P {
+  font-family: $font-fam-secondary;
+  font-size: 20px;
+  font-weight: normal;
+  opacity: 0.9;
+  color: $clt-white;
+  text-overflow: ellipsis;
+  margin: 0;
+}
+
+.carter-tune {
+  margin-bottom: 50%;
+  position: relative;
+
+  .text-overlay-container:last-child {
+    position: absolute;
+    left: 132px;
+  }
+  @media (max-width: $mobile-bp) {
+    .text-overlay-container:last-child {
+      left: 84px;
+    }
+  }
+
+  &.small {
+    .H1 {
+      font-size: 42px;
+    }
+    .text-overlay-container:last-child {
+      left: 84px;
+    }
+  }
+}
+
 @media (max-width: $mobile-bp) {
   .H1 {
     font-size: 42px;

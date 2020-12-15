@@ -1,0 +1,22 @@
+.page {
+  height: 100%;
+  padding-top: 32px;
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 148px;
+    z-index: 5;
+    backdrop-filter: blur(10px);
+    background-color: $clt-green;
+
+    -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+  }
+
+  .content {
+    padding: 128px 0;
+  }
+}
