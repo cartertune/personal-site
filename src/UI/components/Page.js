@@ -7,7 +7,7 @@ const Page = (props) => {
   return (
     <div className="page">
       <div className="header">
-        <div className="container pt-3">
+        <div className="container pt-5">
           <CarterTuneText small />
         </div>
       </div>

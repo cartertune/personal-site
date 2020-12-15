@@ -3,6 +3,7 @@
 
   &:hover {
     .overlay {
+      max-width: 100%;
       display: inline;
     }
   }
@@ -18,6 +19,7 @@
   color: transparent;
 
   &.overlay {
+    max-width: 100%;
     display: inline;
   }
 }
