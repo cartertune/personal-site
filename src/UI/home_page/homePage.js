@@ -16,9 +16,18 @@ const HomePage = (props) => {
           <Link to="/projects">
             <H2 clickable>Projects</H2>
           </Link>
-          <H2 clickable>Books</H2>
-          <H2 clickable>Blog</H2>
-          <H2 clickable>About</H2>
+          <Link to="/books">
+            <H2 clickable>Books</H2>
+          </Link>
+          <Link to="/blog">
+            <H2 clickable>Blog</H2>
+          </Link>
+          <Link to="/resume">
+            <H2 clickable>Resume</H2>
+          </Link>
+          <Link to="/about">
+            <H2 clickable>About</H2>
+          </Link>
         </div>
       </div>
       <div className="hardwood-floor">
